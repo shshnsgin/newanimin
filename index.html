@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Animin
+  </title>
+  <meta content="Animin" name="description"/>
+  <meta content="Anime online" name="keywords"/>
+  <style>
+   /* Сброс */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; font-size: 16px; background: #fff; color: #333; }
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: darkslateblue;
+  padding: 20px;
+  color: white;
+}
+
+.header__logo { display: flex; flex-direction: column; }
+.header__title a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 28px;
+}
+.header__subtitle { font-size: 14px; color: #ccc; }
+
+.header__nav {}
+.header__menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.header__menu-item a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.header__menu-item a:hover {
+  color: gold;
+  transform: scale(1.05);
+}
+
+/* ================= MAIN ================= */
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+.content { flex: 3; }
+.sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+
+.sidebar .sidebar__block {
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+/* ================= FILMS BLOCK ================= */
+.films-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+.films-block img {
+  flex: 1 1 calc(25% - 15px);
+  border-radius: 8px;
+  border: 3px solid #ddd;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 100%;
+}
+.films-block img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.3);
+}
+
+/* ================= POSTS ================= */
+.posts__content { font-size: 0.9em; line-height: 1.5; }
+
+/* ================= FOOTER ================= */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: darkslateblue;
+  color: #aaa;
+  padding: 20px;
+  margin-top: 30px;
+}
+.footer a { color: #aaa; text-decoration: none; }
+.footer a:hover { color: #fff; }
+  </style>
+ </head>
+ <body>
+  <div class="main">
+   <header class="header">
+    <div class="header__logo">
+     <h1 class="header__title">
+      <a href="index.html">
+       Animin
+      </a>
+     </h1>
+     <h2 class="header__subtitle">
+      Animin - the best anime player
+     </h2>
+    </div>
+    <nav class="header__nav">
+     <ul class="header__menu">
+      <li class="header__menu-item header__menu-item--active">
+       <a href="index.html">
+        Главная
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="Anime.html">
+        Аниме
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="Rating.html">
+        Рейтинг
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="#">
+        Жанры
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="Naruto.html">
+        Смотреть Наруто
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </header>
+   <main class="main">
+    <div class="content">
+     <h1>
+      Новые манги
+     </h1>
+     <div class="films_block">
+      <a href="Bleach.html">
+       <img src="assets/img/Bleach_fan.jpg"/>
+      </a>
+      <a href="Demon.html">
+       <img src="assets/img/Demon.jpg"/>
+      </a>
+      <a href="#">
+       <img src="assets/img/Boruto.png"/>
+      </a>
+      <a href="#">
+       <img src="assets/img/3.jpg"/>
+      </a>
+     </div>
+     <h1>
+      Новые аниме
+     </h1>
+     <div class="films_block">
+      <a href="Attack_Titan.html">
+       <img src="assets/img/Attack_Titan.jpg"/>
+      </a>
+      <a href="Myhero.html">
+       <img src="assets/img/Myhero.jpg"/>
+      </a>
+      <a href="One_Piece.html">
+       <img src="assets/img/One_Piece.jpg"/>
+      </a>
+      <a href="Naruto.html">
+       <img src="assets/img/Naruto.jpg"/>
+      </a>
+     </div>
+     <div class="posts">
+      <hr/>
+      <h2>
+       <a href="#">
+        Биография Масаши Кишимото
+       </a>
+      </h2>
+      <div class="posts_content">
+       <p>
+        Масаси Кисимото родился в префектуре Окаяма, Япония...
+       </p>
+      </div>
+      <p>
+       <a href="#">
+        читать
+       </a>
+      </p>
+      <hr/>
+      <h2>
+       <a href="#">
+        One Piece | Большой куш
+       </a>
+      </h2>
+      <div class="posts_content">
+       <p>
+        One Piece (ワンピース) — манга Эйитиро Оды...
+       </p>
+      </div>
+      <p>
+       <a href="#">
+        читать
+       </a>
+      </p>
+     </div>
+    </div>
+    <div class="sidebar">
+     <div class="sidebar">
+      <h2>
+       Поиск
+      </h2>
+      <form>
+       <input placeholder="ваш запрос" type="search"/>
+       <input class="btn" type="submit" value="найти"/>
+      </form>
+     </div>
+     <div class="sidebar">
+      <h2>
+       Вход
+      </h2>
+      <form>
+       <input placeholder="логин" type="text"/>
+       <input placeholder="пароль" type="password"/>
+       <input class="btn" type="submit" value="вход"/>
+       <div class="lables_passreg_text">
+        <span>
+         <a href="#">
+          забыли пароль?
+         </a>
+        </span>
+        |
+        <span>
+         <a href="#">
+          регистрация
+         </a>
+        </span>
+       </div>
+      </form>
+     </div>
+     <div class="sidebar">
+      <h2>
+       Новости
+      </h2>
+      <span>
+       05.04.20
+      </span>
+      <p>
+       Мы открылись!
+      </p>
+      <a href="#">
+       читать
+      </a>
+     </div>
+     <div class="sidebar">
+      <h2>
+       Рейтинг Аниме
+      </h2>
+      <ul>
+       <li>
+        <a href="#">
+         Ван Пис
+        </a>
+        <span class="rating_sidebar">
+         9.9
+        </span>
+       </li>
+       <li>
+        <a href="#">
+         Наруто
+        </a>
+        <span class="rating_sidebar">
+         9.8
+        </span>
+       </li>
+       <li>
+        <a href="#">
+         Блич
+        </a>
+        <span class="rating_sidebar">
+         9.6
+        </span>
+       </li>
+       <li>
+        <a href="#">
+         Фейри тейл
+        </a>
+        <span class="rating_sidebar">
+         9.3
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </main>
+   <footer class="footer">
+    &lt;p&gt;
+&lt;a href="index.html"&gt;Главная&lt;/a&gt; |
+				&lt;a href="Rating.html"&gt;Рейтинг&lt;/a&gt; | 
+				&lt;a href="#"&gt;Жанры&lt;/a&gt; |
+				&lt;a href="#"&gt;Новости&lt;/a&gt; |
+				&lt;a href="Contacts.html"&gt;Контакты&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;animin.com 2020&lt;/p&gt;
+   </footer>
+  </div>
+  <!-- JS для добавления анимаций -->
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+	  document.querySelector(".logo_text h1").classList.add("fade-in-down");
+	  document.querySelector(".logo_text h2").classList.add("fade-in-up");
+
+	  document.querySelectorAll(".sidebar").forEach((el, i) => {
+	    setTimeout(() => el.classList.add("slide-in"), i * 300);
+	  });
+
+	  document.querySelector(".footer").classList.add("fade-in");
+	});
+  </script>
+ </body>
+</html>
