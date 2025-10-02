@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Animin
+  </title>
+  <meta content="Animin" name="description">
+   <meta content="Anime online" name="keywords">
+    <style>
+     * { margin: 0; padding: 0; }
+body { font-size: 1.2em; background-color: #fff; color: #555; }
+p { padding: 0 0 20px 0; line-height: 1.7em; }
+input[type="text"], input[type="password"], input[type="search"] {
+  color: #5d5d5d; width: 60%; padding: 8px;
+}
+input, textarea { outline: none; border: none; border: solid 1px #f2f2f2; }
+h1, h2 { font: normal 170% 'century gothic', arial; margin: 0 0 15px 0; padding: 15px 0 5px 0; color: #000; }
+h2 { font-size: 140%; }
+a, a:hover { outline: none; text-decoration: underline; color: #87CEEB; }
+ul { margin: 2px 0 22px 17px; }
+ul li { margin: 0 0 6px 0; padding: 0 0 4px 5px; line-height: 1.5em; }
+
+.header { background-color: darkslateblue; height: 177px; font-size: 0.8em; min-width: 900px; }
+.main, .logo, .menubar, .site_content, .footer { margin-left: auto; margin-right: auto; }
+.logo { width: 880px; padding-bottom: 40px; }
+.logo h1, .logo h2 { font: normal 300% 'century gothic', arial, sans-serif; margin: 0 0 0 9px; }
+.logo_text h1, .logo_text h1 a { padding: 22px 0 0 0; color: #fff; letter-spacing: 0.1em; text-decoration: none; }
+.logo_text h2 { font-size: 0.9em; padding: 4px 0 0 0; color: #999; }
+
+.menubar { width: 900px; height: 46px; }
+ul.menu { float: right; }
+ul.menu li { float: left; padding: 0 0 0 9px; list-style: none; margin: 1px 2px 0 0; }
+ul.menu li a { font: normal 100% 'trebuchet ms', sans-serif; display: block; height: 20px; padding: 6px 35px 5px 28px; color: #fff; text-decoration: none; }
+ul.menu li.selected a { color: #aeb002; }
+ul.menu li a:hover { color: #e4ec04; }
+
+.site_content { width: 880px; overflow:hidden; margin: 20px auto 0 auto; background-color: white; }
+.sidebar_container { float: right; width: 224px; }
+.sidebar { float: right; width: 222px; padding: 5%; margin: 0 0 16px 0; border: solid 1px #f2f2f2; border-radius: 5px; background-color: #f9f9f9; opacity: 0; }
+.btn { padding: 8px; background-color: white; cursor:pointer; }
+.sidebar h2 { color: #136cb2; }
+.lables_passreg_text { font-size: 0.7em; margin-top: 3%; margin-left: 2%; }
+
+.content { text-align: left; width: 620px; padding: 0 0 0 5px; float: left; }
+.content a { text-decoration: none; }
+.films_block { margin-bottom: 5%; }
+.films_block img { border-radius: 5px; border: solid 5px #dad7d5; width: 22%; margin: 5px 0 0 0; transition: transform .3s, box-shadow .3s; }
+.films_block img:hover { transform: scale(1.05) translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+
+.posts .posts_content { font-size: 0.8em; }
+
+.footer { width: 100%; height: 100px; padding: 28px 0 5px 0; text-align: center; background-color: darkslateblue; color: #a8aa94; min-width: 900px; opacity: 0; }
+.footer a { color: #a8aa94; text-decoration: none; }
+.footer a:hover { color: #fff; }
+
+/* ====== Анимации ====== */
+.fade-in-down { animation: fadeInDown 1.5s forwards; }
+.fade-in-up { animation: fadeInUp 1.5s forwards; }
+@keyframes fadeInDown { from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
+
+.slide-in { animation: slideIn 1s forwards; }
+@keyframes slideIn { from{opacity:0; transform:translateX(50px);} to{opacity:1; transform:translateX(0);} }
+
+.fade-in { animation: fadeIn 2s forwards; }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+.btn, .button { animation: pulse 2.5s infinite; }
+@keyframes pulse { 0%{transform:scale(1);} 50%{transform:scale(1.05);} 100%{transform:scale(1);} }
+
+ul.menu li a { transition: color .3s, transform .3s; }
+ul.menu li a:hover { transform: scale(1.1); color:#FFD700; }
+    </style>
+   </meta>
+  </meta>
+ </head>
+ <body>
+  <div class="main">
+   <header class="header">
+    <div class="header__logo">
+     <h1 class="header__title">
+      <a href="index.html">
+       Animin
+      </a>
+     </h1>
+     <h2 class="header__subtitle">
+      Animin - the best anime player
+     </h2>
+    </div>
+    <nav class="header__nav">
+     <ul class="header__menu">
+      <li class="header__menu-item header__menu-item--active">
+       <a href="index.html">
+        Главная
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="Anime.html">
+        Аниме
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="Rating.html">
+        Рейтинг
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="#">
+        Жанры
+       </a>
+      </li>
+      <li class="header__menu-item">
+       <a href="Naruto.html">
+        Смотреть Наруто
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </header>
+   <main class="main">
+    <div class="content">
+     <h1>
+      Новые манги
+     </h1>
+     <div class="films_block">
+      <a href="Bleach.html">
+       <img src="assets/img/Bleach_fan.jpg"/>
+      </a>
+      <a href="Demon.html">
+       <img src="assets/img/Demon.jpg"/>
+      </a>
+      <a href="#">
+       <img src="assets/img/Boruto.png"/>
+      </a>
+      <a href="#">
+       <img src="assets/img/3.jpg"/>
+      </a>
+     </div>
+     <h1>
+      Новые аниме
+     </h1>
+     <div class="films_block">
+      <a href="Attack_Titan.html">
+       <img src="assets/img/Attack_Titan.jpg"/>
+      </a>
+      <a href="Myhero.html">
+       <img src="assets/img/Myhero.jpg"/>
+      </a>
+      <a href="One_Piece.html">
+       <img src="assets/img/One_Piece.jpg"/>
+      </a>
+      <a href="Naruto.html">
+       <img src="assets/img/Naruto.jpg"/>
+      </a>
+     </div>
+     <div class="posts">
+      <hr/>
+      <h2>
+       <a href="#">
+        Биография Масаши Кишимото
+       </a>
+      </h2>
+      <div class="posts_content">
+       <p>
+        Масаси Кисимото родился в префектуре Окаяма, Япония...
+       </p>
+      </div>
+      <p>
+       <a href="#">
+        читать
+       </a>
+      </p>
+      <hr/>
+      <h2>
+       <a href="#">
+        One Piece | Большой куш
+       </a>
+      </h2>
+      <div class="posts_content">
+       <p>
+        One Piece (ワンピース) — манга Эйитиро Оды...
+       </p>
+      </div>
+      <p>
+       <a href="#">
+        читать
+       </a>
+      </p>
+     </div>
+    </div>
+    <div class="sidebar">
+     <div class="sidebar">
+      <h2>
+       Поиск
+      </h2>
+      <form>
+       <input placeholder="ваш запрос" type="search"/>
+       <input class="btn" type="submit" value="найти"/>
+      </form>
+     </div>
+     <div class="sidebar">
+      <h2>
+       Вход
+      </h2>
+      <form>
+       <input placeholder="логин" type="text"/>
+       <input placeholder="пароль" type="password"/>
+       <input class="btn" type="submit" value="вход"/>
+       <div class="lables_passreg_text">
+        <span>
+         <a href="#">
+          забыли пароль?
+         </a>
+        </span>
+        |
+        <span>
+         <a href="#">
+          регистрация
+         </a>
+        </span>
+       </div>
+      </form>
+     </div>
+     <div class="sidebar">
+      <h2>
+       Новости
+      </h2>
+      <span>
+       05.04.20
+      </span>
+      <p>
+       Мы открылись!
+      </p>
+      <a href="#">
+       читать
+      </a>
+     </div>
+     <div class="sidebar">
+      <h2>
+       Рейтинг Аниме
+      </h2>
+      <ul>
+       <li>
+        <a href="#">
+         Ван Пис
+        </a>
+        <span class="rating_sidebar">
+         9.9
+        </span>
+       </li>
+       <li>
+        <a href="#">
+         Наруто
+        </a>
+        <span class="rating_sidebar">
+         9.8
+        </span>
+       </li>
+       <li>
+        <a href="#">
+         Блич
+        </a>
+        <span class="rating_sidebar">
+         9.6
+        </span>
+       </li>
+       <li>
+        <a href="#">
+         Фейри тейл
+        </a>
+        <span class="rating_sidebar">
+         9.3
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </main>
+   <footer class="footer">
+    &lt;p&gt;
+&lt;a href="index.html"&gt;Главная&lt;/a&gt; |
+				&lt;a href="Rating.html"&gt;Рейтинг&lt;/a&gt; | 
+				&lt;a href="#"&gt;Жанры&lt;/a&gt; |
+				&lt;a href="#"&gt;Новости&lt;/a&gt; |
+				&lt;a href="Contacts.html"&gt;Контакты&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;animin.com 2020&lt;/p&gt;
+   </footer>
+  </div>
+  <!-- JS для добавления анимаций -->
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+	  document.querySelector(".logo_text h1").classList.add("fade-in-down");
+	  document.querySelector(".logo_text h2").classList.add("fade-in-up");
+
+	  document.querySelectorAll(".sidebar").forEach((el, i) => {
+	    setTimeout(() => el.classList.add("slide-in"), i * 300);
+	  });
+
+	  document.querySelector(".footer").classList.add("fade-in");
+	});
+  </script>
+ </body>
+</html>
