@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги | Animin</title>
+  <style>
+/* Сброс */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; font-size: 16px; background: #fff; color: #333; }
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: darkslateblue;
+  padding: 20px;
+  color: white;
+}
+.header__logo { display: flex; flex-direction: column; }
+.header__title a { text-decoration: none; color: #fff; font-size: 28px; }
+.header__subtitle { font-size: 14px; color: #ccc; }
+.header__menu { display: flex; gap: 20px; list-style: none; }
+.header__menu-item a { color: white; text-decoration: none; transition: 0.3s; }
+.header__menu-item a:hover { color: gold; transform: scale(1.05); }
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%;
+  gap: 20px;
+}
+.hero__text { flex: 1; }
+.hero__title { font-size: 32px; margin-bottom: 20px; }
+.hero__desc { font-size: 18px; line-height: 1.5; }
+.hero__image { flex: 1; }
+.hero__image img { max-width: 100%; border-radius: 8px; }
+
+/* ================= SERVICES ================= */
+.services {
+  width: 90%;
+  margin: 40px auto;
+}
+.services__title { font-size: 28px; margin-bottom: 20px; text-align: center; }
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.services__item {
+  flex: 1 1 calc(33% - 20px);
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+}
+.services__item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,.2); }
+.services__item-icon img { width: 80px; margin-bottom: 15px; }
+.services__item-title { font-size: 20px; margin-bottom: 10px; }
+.services__item-desc { font-size: 15px; line-height: 1.4; }
+
+/* ================= PARTNERS ================= */
+.partners {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+.partners__title { font-size: 28px; margin-bottom: 20px; }
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.partners__item img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+.partners__item img:hover { filter: grayscale(0); }
+
+/* ================= FOOTER ================= */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: darkslateblue;
+  color: #aaa;
+  padding: 20px;
+  margin-top: 30px;
+}
+.footer a { color: #aaa; text-decoration: none; }
+.footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__logo">
+      <h1 class="header__title"><a href="index.html">Animin</a></h1>
+      <h2 class="header__subtitle">Animin - the best anime player</h2>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item"><a href="index.html">Главная</a></li>
+        <li class="header__menu-item header__menu-item--active"><a href="uslugi.html">Услуги</a></li>
+        <li class="header__menu-item"><a href="Rating.html">Рейтинг</a></li>
+        <li class="header__menu-item"><a href="#">Жанры</a></li>
+        <li class="header__menu-item"><a href="Naruto.html">Смотреть Наруто</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero__text">
+      <h1 class="hero__title">Наши услуги</h1>
+      <p class="hero__desc">Мы предлагаем широкий спектр сервисов для любителей аниме: от онлайн-плеера до новостных обзоров и эксклюзивных подборок.</p>
+    </div>
+    <div class="hero__image">
+      <img src="assets/img/anime_bg.jpg" alt="Услуги">
+    </div>
+  </section>
+
+  <section class="services">
+    <h2 class="services__title">Что мы предлагаем</h2>
+    <div class="services__list">
+      <div class="services__item">
+        <div class="services__item-icon"><img src="assets/img/icon1.png" alt="Иконка"></div>
+        <h3 class="services__item-title">Онлайн-плеер</h3>
+        <p class="services__item-desc">Смотрите любимое аниме в высоком качестве без рекламы и ограничений.</p>
+      </div>
+      <div class="services__item">
+        <div class="services__item-icon"><img src="assets/img/icon2.png" alt="Иконка"></div>
+        <h3 class="services__item-title">Рейтинг аниме</h3>
+        <p class="services__item-desc">Следите за топовыми тайтлами по мнению зрителей и критиков.</p>
+      </div>
+      <div class="services__item">
+        <div class="services__item-icon"><img src="assets/img/icon3.png" alt="Иконка"></div>
+        <h3 class="services__item-title">Новости и статьи</h3>
+        <p class="services__item-desc">Читайте свежие новости из мира аниме и обзоры новых серий.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <h2 class="partners__title">Наши партнёры</h2>
+    <div class="partners__list">
+      <div class="partners__item"><img src="assets/img/partner1.png" alt="Partner"></div>
+      <div class="partners__item"><img src="assets/img/partner2.png" alt="Partner"></div>
+      <div class="partners__item"><img src="assets/img/partner3.png" alt="Partner"></div>
+      <div class="partners__item"><img src="assets/img/partner4.png" alt="Partner"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>
+      <a href="index.html">Главная</a> |
+      <a href="Rating.html">Рейтинг</a> |
+      <a href="#">Жанры</a> |
+      <a href="#">Новости</a> |
+      <a href="Contacts.html">Контакты</a>
+    </p>
+    <p>animin.com 2025</p>
+  </footer>
+
+</body>
+</html>
